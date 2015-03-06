@@ -1,0 +1,118 @@
+// ==========================================================================
+// Glyphicons - Jan Kovarik, www.glyphicons.com / @jankovarik
+// ==========================================================================
+
+// @fontface setup
+@font-face {
+	font-family: 'Glyphicons';
+	src: url('/assets/fonts/glyphicons/glyphicons-regular.eot');
+	src: url('/assets/fonts/glyphicons/glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+		 url('/assets/fonts/glyphicons/glyphicons-regular.woff') format('woff'),
+		 url('/assets/fonts/glyphicons/glyphicons-regular.ttf') format('truetype'),
+		 url('/assets/fonts/glyphicons/glyphicons-regular.svg#glyphicons_halflingsregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glyphicons Social';
+    src: url('/assets/fonts/glyphicons/glyphicons-social-regular.eot');
+    src: url('/assets/fonts/glyphicons/glyphicons-social-regular.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/glyphicons/glyphicons-social-regular.woff') format('woff'),
+         url('/assets/fonts/glyphicons/glyphicons-social-regular.ttf') format('truetype'),
+         url('/assets/fonts/glyphicons/glyphicons-social-regular.svg#glyphicons_socialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Set default styles
+[class^="icon-"],
+[class*=" icon-"] {
+	//color: inherit;
+    display: inline-block;
+    //vertical-align: middle; //baseline default
+    line-height: inherit;
+}
+
+// Specific styles
+// --------------------------------------------
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: 'Glyphicons';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+    vertical-align: top;
+}
+
+[class^="icon-social-"]:before,
+[class*=" icon-social-"]:before {
+    font-family: 'Glyphicons Social';
+}
+
+// Icon sizes
+i[class^="icon-"],
+i[class*=" icon-"] {
+    &.icon-small::before {
+        .font-size(@smallIconSize);
+    }
+    &.icon-medium::before {
+        .font-size(@mediumIconSize);
+    }
+    &.icon-large::before {
+        .font-size(@largeIconSize);
+    }
+    &.icon-massive::before {
+        .font-size(@massiveIconSize);
+    }
+}
+
+.btn,
+.btn-faux-link,
+a {
+    [class^="icon-"],
+    [class*=" icon-"] {
+        line-height: 1;
+        text-decoration: inherit;
+        margin-right: 5px;
+        
+        &.right-icon {
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }
+}
+
+// Lists
+li[class^="icon-"],
+li[class*=" icon-"] {
+    display: block;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 10px;
+    
+    &::before {
+        position: relative;
+        left: -10px;
+        text-indent: -2em;
+        text-align: center;
+    }
+}
+
+
+// Icon variants
+// --------------------------------------------
+
+.icon-social-google-plus:before { content: "\e003"; }
+.icon-social-youtube:before { content: "\e023"; }
+.icon-social-facebook:before { content: "\e031"; }
+.icon-social-twitter:before { content: "\e032"; }
+.icon-social-pinterest:before { content: "\e001"; }
+
+.icon-circle-plus:before { content:"\e191"; }
+.icon-circle-minus:before { content:"\e192"; }
+.icon-mute:before { content:"\e185"; }
+.icon-unmute:before { content:"\e183"; }
+.icon-circle-question-mark:before { content:"\e194"; }
